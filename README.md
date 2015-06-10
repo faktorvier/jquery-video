@@ -1,6 +1,6 @@
 jQuery Video Controller
 ==============
-This video plugin for jQuery allows you to controll **HTML5,** **Youtube** and **Vimeo** Videos with the same functions and the same syntax.
+This video plugin for jQuery allows you to controll **HTML5,** **Youtube** and **Vimeo** videos with the same functions and the same syntax.
 
 ## Dependencies
 * <a href="http://jquery.com/" target="_blank">jQuery 1.9+</a>
@@ -39,7 +39,7 @@ $('.video').video('pause');
 ```
 
 ### Stop videos
-Stops the video(s). HTML5 and Vimeo videos will stop and resetted to the initial state. Youtube videos will jump to the end of the video (and trigger de finish event).
+Stops the video(s). **HTML5** and **Vimeo** videos will stop and reset to the initial state. **Youtube** videos will jump to the end of the video (and trigger the finish event).
 ```javascript
 $('.video').stopVideo();
 // or
@@ -60,7 +60,7 @@ $('.video').muteVideo();
 $('.video').video('mute');
 ```
 ### Unmute videos
-Unmute the video(s). The volume of vimeo videos will be set to 1 (max).
+Unmute the video(s). The volume of **Vimeo** videos will be set to 1 (max) instead of changing back to the previous volume.
 ```javascript
 $('.video').unmuteVideo();
 // or
@@ -80,7 +80,7 @@ $('.video').addVideoEvent('play', onPlay);
 // or
 $('.video').video('addVideoEvent', 'play', onPlay);
 ```
-### Remove event to video
+### Remove event from video
 Removes an event from a video.
 ```javascript
 $('.video').removeVideoEvent('play');
@@ -110,14 +110,14 @@ $('.video').addVideoEvent('pause', onPause);
 $('.video').video('addVideoEvent', 'pause', onPause);
 ```
 ### onFinish
-Triggers has reached the end and is finished. The stop method on Youtube Videos will trigger this event too.
+Triggers has reached the end and is finished. The stop method on **Youtube** videos will trigger this event too.
 ```javascript
 $('.video').addVideoEvent('finish', onFinish);
 // or
 $('.video').video('addVideoEvent', 'finish', onFinish);
 ```
 ### onDestroy
-Triggers if the video is destroyed.
+Triggers if the video is destroyed through the destroy method above.
 ```javascript
 $('.video').addVideoEvent('destroy', onDestroy);
 // or
