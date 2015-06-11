@@ -17,9 +17,13 @@ Each of the following functions can be triggered on **one** or **multiple** vide
 ### Initialize video(s)
 Initializes the video(s) and change default settings if necessary.
 ```javascript
-$('.video').video();
+$('.video').video({
+    attr_ready: 'data-video-ready',
+    attr_playing: 'data-video-playing',
+    attr_paused: 'data-video-paused'
+});
 // or
-$('.video').initVideo();
+$('.video').initVideo( ... );
 ```
 
 ### Play videos
@@ -122,6 +126,16 @@ Triggers if the video is destroyed through the destroy method above.
 $('.video').addVideoEvent('destroy', onDestroy);
 // or
 $('.video').video('addVideoEvent', 'destroy', onDestroy);
+```
+### Global settings
+The following settings are global for all videos:
+```javascript
+// The suffix for all the video events (for unique purposes)
+$.video.event_suffix = '_video';
+// An array with callbacks for the onYouTubeIframeAPIReady() call
+$.video.youtube_api_ready_callbacks = [],
+// The youtube iframe api url
+$.video.youtube_iframe_api = 'https://www.youtube.com/iframe_api'
 ```
 ## Todo
 * more events and methods
