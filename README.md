@@ -1,6 +1,6 @@
 jQuery Video Controller
 ==============
-This video plugin for jQuery allows you to controll **HTML5,** **Youtube** and **Vimeo** videos with the same functions and the same syntax.
+This video plugin for jQuery allows you to control **HTML5,** **Youtube** and **Vimeo** videos with the same functions and the same syntax.
 
 ## Dependencies
 * <a href="http://jquery.com/" target="_blank">jQuery 1.9+</a>
