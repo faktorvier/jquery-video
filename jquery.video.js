@@ -1,4 +1,4 @@
-/*! FAKTOR VIER Video Controller v0.1.0 | (c) 2015 FAKTOR VIER GmbH | http://faktorvier.ch */
+/*! FAKTOR VIER Video Controller v0.1.1 | (c) 2015 FAKTOR VIER GmbH | http://faktorvier.ch */
 
 // Youtube iframe api ready callback
 function onYouTubeIframeAPIReady() {
@@ -614,6 +614,11 @@ window[video_postmessage_event_func](
 			var video_type = $video.getVideoType();
 			var video_player = $video.getVideoPlayer();
 
+			// Trigger play event if html5 video autoplay
+			if(eventType == 'play' && video_type == 'video' && typeof $video.get(0).paused != 'undefined' && !$video.get(0).paused) {
+				handler(null, $video, video_type, video_player);
+			}
+
 			$video.bind(
 				eventType + $.video.global.event_suffix,
 				function(e) {
@@ -690,7 +695,7 @@ window[video_postmessage_event_func](
 					break;
 
 				case 'removeEvent':
-					$video.addVideoEvent(video_args[0]);
+					$video.removeVideoEvent(video_args[0]);
 					break;
 
 				default:

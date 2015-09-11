@@ -144,3 +144,6 @@ $.video.youtube_iframe_api = 'https://www.youtube.com/iframe_api'
 ## Changelog
 ##### v0.1.0 (2015-06-10)
 Initial release
+##### v0.1.1 (2015-09-11)
+- removeEvent bug fixed,
+- play event now triggers on autoplay html5 videos
