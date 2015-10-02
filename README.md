@@ -2,6 +2,9 @@ jQuery Video Controller
 ==============
 This video plugin for jQuery allows you to control **HTML5,** **Youtube** and **Vimeo** videos with the same functions and the same syntax.
 
+## Demo
+* <a href="http://labs.faktorvier.ch/plugins/jquery-video/demo.html" target="_blank">See demo</a>
+
 ## Dependencies
 * <a href="http://jquery.com/" target="_blank">jQuery 1.9+</a>
 
@@ -142,8 +145,14 @@ $.video.youtube_iframe_api = 'https://www.youtube.com/iframe_api'
 * settings (autoplay etc.)
 
 ## Changelog
-##### v0.1.0 (2015-06-10)
-Initial release
+
+##### v0.1.2 (2015-10-02)
+- demo page added
+- html5 video ready event fixed
+
 ##### v0.1.1 (2015-09-11)
 - removeEvent bug fixed,
 - play event now triggers on autoplay html5 videos
+
+##### v0.1.0 (2015-06-10)
+Initial release
