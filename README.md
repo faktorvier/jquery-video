@@ -146,6 +146,9 @@ $.video.youtube_iframe_api = 'https://www.youtube.com/iframe_api'
 
 ## Changelog
 
+##### v0.1.3 (2015-12-07)
+- postmessage function fixed
+
 ##### v0.1.2 (2015-10-02)
 - demo page added
 - html5 video ready event fixed
