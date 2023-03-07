@@ -1,4 +1,4 @@
-/*! FAKTOR VIER Video Controller v0.1.3 | (c) 2015 FAKTOR VIER GmbH | http://faktorvier.ch */
+/*! FAKTOR VIER Video Controller v0.1.4 | (c) 2023 FAKTOR VIER GmbH | http://faktorvier.ch */
 
 // Youtube iframe api ready callback
 function onYouTubeIframeAPIReady() {
@@ -36,6 +36,10 @@ window[video_postmessage_event_func](
 		if(video_config == null) {
 			$video.initVideo();
 			video_config = $video.getVideoConfig();
+		}
+		
+		if(video_config == null) {
+			return;
 		}
 
 		switch(video_event) {

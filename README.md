@@ -146,6 +146,9 @@ $.video.youtube_iframe_api = 'https://www.youtube.com/iframe_api'
 
 ## Changelog
 
+##### v0.1.4 (2023-03-07)
+- fix for missing video configuration
+
 ##### v0.1.3 (2015-12-07)
 - postmessage function fixed
 
